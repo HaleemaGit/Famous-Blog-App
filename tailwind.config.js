@@ -6,7 +6,12 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      lineHeight: {
+        'extra-loose': '2.5',
+        '12': '3rem',
+      }
+    },
   },
   variants: {
     extend: {},

@@ -55,8 +55,8 @@ const Post: React.FC<PostProps> = (props) => {
 
   return (
     <Layout>
-      <div>
-        <h2>{title}</h2>
+      <div className="font-sans px-8">
+        <h2 className="mt-8">{title}</h2>
         <p>By {props?.author?.name || 'Unknown author'}</p>
         <ReactMarkdown children={props.content} />
         {!props.published && userHasValidSession && postBelongsToUser && (

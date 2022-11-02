@@ -71,145 +71,6 @@ export default function Page({ csrfToken, providers }) {
   };
 
   return (
-    // <div className="grid h-screen place-items-center">
-    //   <Head>
-    //     <title>Sign In</title>
-    //     <link rel="icon" href="/favicon.ico" />
-    //   </Head>
-    //   <div className="">
-    //     <a href="/">
-    //       <img
-    //         className="h-16 mx-auto"
-    //         src="/assets/loading"
-    //         alt="Amazing User"
-    //       />
-    //     </a>
-    //   </div>
-    //   <div className="">
-    //     <div className="">
-    //       <h1 className="text-xl font-bold leading-7 text-gray-900 sm:leading-9 sm:truncate">
-    //         Sign In
-    //       </h1>
-    //       <h2>Sign in with an existing account, or create new account.</h2>
-    //     </div>
-    //     <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-    //       <div className="py-8 px-4 mx-2 rounded-sm sm:px-10">
-    //         <form
-    //           className="text-center my-12"
-    //           onSubmit={handleSubmit(onSubmit)}
-    //         >
-    //           <input
-    //             name="csrfToken"
-    //             {...register("csrfToken")}
-    //             type="hidden"
-    //             defaultValue={csrfToken}
-    //             hidden
-    //           />
-    //           <div className="">
-    //             <label
-    //               htmlFor="email"
-    //               className="block text-sm font-medium text-neutral-400"
-    //             >
-    //               Email address
-    //             </label>
-    //             <div className="mt-1">
-    //               <input
-    //                 id="email"
-    //                 name="email"
-    //                 type="email"
-    //                 // autoComplete="email"
-    //                 required
-    //                 ref={email}
-    //                 {...register("email")}
-    //                 className="appearance-none w-full font-medium py-3 border-b border-t-0 border-l-0 border-r-0 border-dashed outline-none text-xl text-center leading-6 bg-transparent placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out"
-    //               />
-    //             </div>
-    //           </div>
-
-    //           <div>
-    //             <div className="mt-8">
-    //               <label
-    //                 htmlFor="password"
-    //                 className="block text-sm font-medium text-neutral-400"
-    //               >
-    //                 Password
-    //               </label>
-    //             </div>
-    //             <div className="mt-1">
-    //               <input
-    //                 id="password"
-    //                 name="password"
-    //                 type="password"
-    //                 autoComplete="current-password"
-    //                 minLength={12}
-    //                 required
-    //                 ref={password}
-    //                 {...register("password")}
-    //                 className="appearance-none w-full font-medium py-3 border-b border-t-0 border-l-0 border-r-0 border-dashed outline-none text-xl text-center leading-6 bg-transparent placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 transition duration-150 ease-in-out"
-    //               />
-    //             </div>
-    //           </div>
-
-    //           <div className="mt-6 space-y-2 flex justify-center">
-    //             <button
-    //               type="submit"
-    //               disabled={isSubmitting}
-    //               className="button button__md button__primary w-full"
-    //             >
-    //               {isSubmitting ? (
-    //                 toast.loading("Redirecting...")
-    //                 // <img src="/assets/loading.svg" />
-    //               ) : (
-    //                 <p>Sign in</p>
-    //               )}
-    //             </button>
-    //           </div>
-    //         </form>
-
-    //         {/* <section className="mt-8 text-center">
-    //           <div className="flex flex-col mb-3">
-    //             <hr className="h-0 border-t mt-1" />
-    //             <div className="-mt-3 text-sm text-center">
-    //               <span className="px-2 bg-white text-secondary">Or with</span>
-    //             </div>
-    //           </div>
-
-    //           <div className="grid grid-cols-2 gap-6">
-    //             {/* {providers.map((provider) => {
-    //               return ( */}
-    //                 <button
-    //                   key=""
-    //                   type="button"
-    //                   onClick={handleProviderSignIn}
-    //                   className="button button__secondary inline-flex space-x-2"
-    //                 >
-    //                   <img
-    //                     className="w-6 h-6"
-    //                     src={`/assets/google.png`}
-    //                   />
-    //                   <p>Google</p>
-    //                 </button>
-    //                 <button
-    //                   key=""
-    //                   type="button"
-    //                   onClick={handleGitHubProviderSignIn}
-    //                   className="button button__secondary inline-flex space-x-2"
-    //                 >
-    //                   <img
-    //                     className="w-6 h-6"
-    //                     src={`/assets/github.png`}
-    //                   />
-    //                   <p>GitHub</p>
-    //                 </button>
-
-    //           </div>
-    //         </section> */}
-
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -277,7 +138,7 @@ export default function Page({ csrfToken, providers }) {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="button button__md button__primary w-full rounded hover:rounded-lg shadow-xl bg-blue-600 text-white pt-2 pb-2 mt-2"
+                      className="button button__md button__primary w-full rounded hover:rounded-lg shadow-xl bg-blue-600 text-white pt-2 pb-2 mt-2 hover:rounded-lg hover:text-white hover:bg-green-500"
                     >
                       {isSubmitting ? (
                         toast.loading("Redirecting...")
@@ -305,7 +166,7 @@ export default function Page({ csrfToken, providers }) {
                 key=""
                 type="button"
                 onClick={handleProviderSignIn}
-                className="button button__secondary inline-flex space-x-2 flex justify-center items-center bg-gray-200 shadow-2xl rounded hover:rounded-lg hover:text-white hover:bg-blue-600 bg-green-500 pt-2 pb-2"
+                className="button button__secondary inline-flex space-x-2 flex justify-center items-center bg-gray-200 shadow-2xl rounded hover:rounded-lg hover:text-white hover:bg-blue-600 pt-2 pb-2"
               >
                 <img className="w-6 h-6" src={`/assets/google.png`} />
                 <p>Google</p>
@@ -314,7 +175,7 @@ export default function Page({ csrfToken, providers }) {
                 key=""
                 type="button"
                 onClick={handleGitHubProviderSignIn}
-                className="button button__secondary inline-flex space-x-2 flex justify-center items-center bg-gray-200 shadow-2xl rounded hover:rounded-lg bg-green-500 hover:text-white hover:bg-blue-600 pt-2 pb-2"
+                className="button button__secondary inline-flex space-x-2 flex justify-center items-center bg-gray-200 shadow-2xl rounded hover:rounded-lg hover:text-white hover:bg-blue-600 pt-2 pb-2"
               >
                 <img className="w-6 h-6" src={`/assets/github-logo.png`} />
                 <p>GitHub</p>

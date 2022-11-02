@@ -2,7 +2,6 @@ import React from "react"
 import { GetStaticProps } from "next"
 import Layout from "../components/Layout"
 import Post, { PostProps } from "../components/Post"
-
 import prisma from '../lib/prisma';
 
 
@@ -31,7 +30,7 @@ const Blog: React.FC<Props> = (props) => {
   return (
     <Layout>
       <div className="page">
-        <h1>Public Feed</h1>
+        <h1 className="text-4xl bg-gradient-to-r from-indigo-500 mb-8 pt-4 pb-4 px-8 text-white">FAMOUS BLOG</h1>
         <main>
           {props.feed.map((post) => (
             <div key={post.id} className="post">
