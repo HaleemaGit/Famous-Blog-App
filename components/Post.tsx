@@ -16,7 +16,7 @@ export type PostProps = {
 const Post: React.FC<{ post: PostProps }> = ({ post }) => {
   const authorName = post.author ? post.author.name : "Unknown author";
   return (
-    <div  className="font-sans px-8 " onClick={() => Router.push("/p/[id]", `/p/${post.id}`)}>
+    <div  className="dynamic font-sans px-8" onClick={() => Router.push("/p/[id]", `/p/${post.id}`)}>
       <h2 className="mt-8 ">{post.title}</h2>
       <small>By {authorName}</small>
       <ReactMarkdown className="mt-8 "children={post.content} />
