@@ -1,31 +1,12 @@
-// // cypress/e2e/.cy.ts
-
-// describe('Navigation', () => {
-//   it('should navigate to a dynamic page', () => {
-//     // Start from the index page
-//     cy.visit('http://localhost:3000/')
-
-//     // Find a link with an href attribute containing "about" and click it
-//     cy.get('[id^=dynamic]').click()
-
-//     // The new url should include "/sign-in"
-//     cy.url().should('include', '/p/[id]')
-
-//     // The new page should contain an h1 with "About page"
-//     cy.get('p').contains('.author')
-//   })
-// })
-
-
 
 describe("Login page", () => {
   before(() => {
     cy.log(`Visiting https://famousblog.com`)
     cy.visit("http://localhost:3000/")
   })
-  it("Login with Google", () => {
-    const username = Cypress.env("GOOGLE_USER")
-    const password = Cypress.env("GOOGLE_PW")
+  it("Login with Custom Credentials", () => {
+    const username = Cypress.env("CUSTOM_USER")
+    const password = Cypress.env("CUSTOM_PW")
     const loginUrl = Cypress.env("SITE_NAME")
     const cookieName = Cypress.env("COOKIE_NAME")
     const socialLoginOptions = {
@@ -37,12 +18,12 @@ describe("Login page", () => {
       isPopup: true,
       loginSelector: `a[href="${Cypress.env(
         "SITE_NAME"
-      )}/api/auth/signin/google"]`,
+      )}/api/auth/signin/credentials"]`,
       postLoginSelector: ".bold",
     }
 
     return cy
-      .task("GoogleSocialLogin", socialLoginOptions)
+      .task("CredentialsLogin")
       .then(({ cookies }) => {
         cy.clearCookies()
 
