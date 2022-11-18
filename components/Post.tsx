@@ -1,6 +1,7 @@
 import React from "react";
 import Router from "next/router";
-import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
+// import ReactMarkdown from "react-markdown";
 
 export type PostProps = {
   id: string;
@@ -19,7 +20,8 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
     <div  className="font-sans px-8 " onClick={() => Router.push("/p/[id]", `/p/${post.id}`)}>
       <h2 className="mt-8 ">{post.title}</h2>
       <small>By {authorName}</small>
-      <ReactMarkdown className="mt-8 "children={post.content} />
+      <div className="mt-8 ">{post.content} </div> 
+      {/* <ReactMarkdown className="mt-8 " children={post.content}/> */}
       <style jsx>{`
         div {
        
