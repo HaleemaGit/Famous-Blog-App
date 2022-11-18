@@ -7,15 +7,15 @@ import { signOut, useSession } from 'next-auth/react';
 const Header: React.FC = () => {
   const router = useRouter();
   const isActive: (pathname: string) => boolean = (pathname) =>
-    router.pathname === pathname;
+    router?.pathname === pathname;
 
   const { data: session, status } = useSession();
-  console.log("session", session)
+
   let left = (
     <div className="left">
       <Link href="/">
         <a className="bold" data-active={isActive('/')}>
-         
+
         </a>
       </Link>
       <style jsx>{`

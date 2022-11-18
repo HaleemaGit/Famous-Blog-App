@@ -1,4 +1,6 @@
-// __tests__/index.test.jsx
+/**
+ * @jest-environment jsdom
+ */
 
 import { render, screen } from '@testing-library/react'
 import Blog from '../pages/index'
@@ -9,10 +11,8 @@ describe('Home', () => {
   it('renders a heading', () => {
     render(<SessionProvider session={null} ><Blog feed={[]} /></SessionProvider>)
 
-    // const heading = screen.getByRole('heading', {
-    //   name: /FAMOUS BLOG\.ts!/i,
-    // })
+    const heading = screen.getByRole('heading')
 
-    // expect(heading).toBeInTheDocument()
+    expect(heading).toBeInTheDocument()
   })
 })
